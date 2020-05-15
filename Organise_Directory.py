@@ -1,3 +1,6 @@
+''' Save the file in the directory which needs to be organised'''
+
+#import dependencies
 import os
 from pathlib import Path
 
@@ -15,11 +18,15 @@ def pickDirectory(value):
         for suffix in suffixes:            
             if suffix== value:      #check each suffix for file type
                 return category
+    return "Misc"                   #conditional if defined file type not found
 
 
 def OrganiseDirectory():
     
     for item in os.scandir():          #scan items in given directory
+        
+        if item.is_dir():              #if item is a directory then skip
+            continue
         file_path=Path(item)           #path for the file in directory
         file_type= file_path.suffix.lower()     # suffix gives the extension of the file
         directory= pickDirectory(file_type)      # using pickDirectory function to choose output directory
