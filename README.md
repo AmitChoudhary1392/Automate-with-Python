@@ -13,3 +13,4 @@ This repository contains code snippets for automating general tasks using Python
 
 #### Web-pages used for scraping:
 * [Quotes to Scrape](http://quotes.toscrape.com/)
+* [Scraping Club](https://scrapingclub.com/exercise/list_basic/?page=1)
